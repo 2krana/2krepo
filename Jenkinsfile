@@ -7,6 +7,7 @@ pipeline {
           "Node 1": {
             echo 'Step 1'
             echo 'Step 2'
+            sh 'sleep 30'
             
           },
           "Node 2": {
