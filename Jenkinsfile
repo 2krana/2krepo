@@ -4,17 +4,22 @@ pipeline {
     stage('Stage 1') {
       steps {
         parallel(
-          "Node 1": {
+          "KlocWorkScan": {
             echo 'Step 1'
             echo 'Step 2'
-            sh 'sleep 30'
             
           },
-          "Node 2": {
+          "Create Package": {
             echo 'Step 3'
+            sh 'sleep 30'
             
           }
         )
+      }
+    }
+    stage('Final Step') {
+      steps {
+        sh 'echo \'Final Step\''
       }
     }
   }
