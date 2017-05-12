@@ -7,7 +7,7 @@ pipeline {
         sh 'sleep 10'
       }
     }
-    stage('Run_Klocwork_Scan') {
+    stage('Run_Klocwork and Create Package') {
       steps {
         parallel(
           "Run_Klocwork_Scan": {
