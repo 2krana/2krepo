@@ -19,7 +19,6 @@ pipeline {
             echo 'Running Create_Package'
             sh 'sleep 5'
             timeout(time: 2) {
-              sleep 2
               sh '''echo 'Running CHild Step'
 sleep 10'''
             }
