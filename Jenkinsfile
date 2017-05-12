@@ -22,9 +22,12 @@ pipeline {
               sleep 10
               echo 'Child Completed'
             }
-            catchError {
-              sh 'might fail'
+            
+            catchError() {
+              sh 'echo \'Exception Caught\''
             }
+            
+            
           }
         )
       }
