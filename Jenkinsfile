@@ -1,4 +1,3 @@
-#!/usr/bin/groovy
 pipeline {
   agent any
   stages {
@@ -19,11 +18,9 @@ pipeline {
           "Create_Package": {
             echo 'Running Create_Package'
             sh 'sleep 5'
-            try {
               timeout(time: 2, unit: 'SECONDS') {
                 sleep 10
                 echo 'Child Completed'
-              }
             }
             catch(e) {
               sh 'echo \'Exception Caught\''
