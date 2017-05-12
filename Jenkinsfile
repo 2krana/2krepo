@@ -90,5 +90,15 @@ pipeline {
         sleep 5
       }
     }
+    stage('Time Limit Step') {
+      steps {
+        sleep 10
+        timeout(time: 5) {
+          echo 'Running Child Step'
+          sleep 10
+        }
+        
+      }
+    }
   }
 }
