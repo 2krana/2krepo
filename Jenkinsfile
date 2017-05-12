@@ -12,7 +12,7 @@ pipeline {
         parallel(
           "Run_Klocwork_Scan": {
             echo 'Running Run_Klocwork_Scan'
-            sh 'sleep 10'
+            sh 'sleep 100 &' 
             
           },
           "Create_Package": {
