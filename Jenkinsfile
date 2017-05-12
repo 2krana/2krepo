@@ -24,7 +24,7 @@ pipeline {
                 echo 'Child Completed'
               }
             }
-            catchError() {
+            catch(e) {
               sh 'echo \'Exception Caught\''
             }
           }
