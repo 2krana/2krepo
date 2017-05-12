@@ -18,12 +18,15 @@ pipeline {
           "Create_Package": {
             echo 'Running Create_Package'
             sh 'sleep 5'
-            catchError {
+            catchError() {
               timeout(time: 2, unit: 'SECONDS') {
                 sleep 10
                 echo 'Child Completed'
+              }
+              
             }
-            }
+            
+            
           }
         )
       }
