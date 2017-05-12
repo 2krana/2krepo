@@ -90,11 +90,10 @@ pipeline {
         sleep 5
       }
     }
-    stage('Time Limit Step') {
+    stage('Enforce Time Step') {
       steps {
         sleep 2
         timeout(time: 5) {
-          echo 'Running Child Step'
           sleep 10
         }
         
