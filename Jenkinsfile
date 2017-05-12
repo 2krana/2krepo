@@ -16,10 +16,10 @@ pipeline {
             
           },
           "Create_Package": {
+            try {
             echo 'Running Create_Package'
             sh 'sleep 5'
             //catchError() {
-            try {
               timeout(time: 2, unit: 'SECONDS') {
                 sleep 10
                 echo 'Child Completed'
