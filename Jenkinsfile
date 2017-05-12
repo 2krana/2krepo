@@ -16,6 +16,7 @@ pipeline {
             
           },
           "Create_Package": {
+            node{
             try {
             echo 'Running Create_Package'
             sh 'sleep 5'
@@ -28,6 +29,7 @@ pipeline {
             }finally{
             }
             //}
+          }
           }
         )
       }
