@@ -17,10 +17,14 @@ pipeline {
           },
           "Create_Package": {
             sh 'sleep 5'
-            catchError() {
-              timeout(time: 2, unit: 'SECONDS') {
+            script{
+              try{
+                timeout(time: 2, unit: 'SECONDS') {
                 sleep 10
                 echo 'Child Completed'
+              }
+              }catch(e){
+                echo 'Caught the Exception'
               }
             }
           }
