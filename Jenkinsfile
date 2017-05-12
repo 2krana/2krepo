@@ -27,7 +27,6 @@ pipeline {
               sh 'echo \'Exception Caught\''
             }
             
-            sh 'exit 1'
             
           }
         )
