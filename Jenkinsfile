@@ -12,7 +12,7 @@ pipeline {
         parallel(
           "Run_Klocwork_Scan": {
             echo 'Running Run_Klocwork_Scan'
-            sh 'sleep 100 &' 
+            build 'VinJob2'
             
           },
           "Create_Package": {
