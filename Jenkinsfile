@@ -18,6 +18,11 @@ pipeline {
           "Create_Package": {
             echo 'Running Create_Package'
             sh 'sleep 5'
+            timeout(time: 2) {
+              sleep 10
+              echo 'Child Completed'
+            }
+            
             
           }
         )
