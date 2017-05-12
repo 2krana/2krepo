@@ -33,5 +33,10 @@ pipeline {
         )
       }
     }
+    stage('Final Stage') {
+      steps {
+        sh 'echo \'Condition Met\''
+      }
+    }
   }
 }
