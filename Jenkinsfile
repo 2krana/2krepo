@@ -21,6 +21,7 @@ pipeline {
               timeout(time: 2, unit: 'SECONDS') {
                 sleep 10
                 echo 'Child Completed'
+              }
             }
           }
         )
