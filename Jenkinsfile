@@ -90,14 +90,5 @@ pipeline {
         sleep 5
       }
     }
-    stage('Enforce Time Step') {
-      steps {
-        sleep 2
-        timeout(time: 5) {
-          sleep 10
-        }
-        
-      }
-    }
   }
 }
